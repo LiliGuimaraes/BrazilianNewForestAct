@@ -51,48 +51,47 @@
         <!--Identify farmer profile-->
         <div>
             <form action="#" method="post" id="demoForm" class="demoForm">
+                <label>Quantos módulos fiscais a sua propriedada tem:</label>
+                <select id="fiscalModule">
+                    <option value="minifundio">até 1 módulo fiscal</option>
+                    <option value="smallPropertie">de 1 até 2 módulos fiscais</option>
+                    <option value="mediumPropertie">maior que 2 até 4 módulos fiscais</option>
+                    <option value="2_mediumPropertie">maior que 4 até 10 módulos fiscais</option>
+                    <option value="bigPropertie">maior que 10 módulos fiscais</option>
+                </select>
+                <br>
                 <label>Escolha seu estado e cidade</label>
                 <select id="state">
                 </select>
 
                 <select id="municipie">
                 </select>
-                <br>
-                <label>Quantos módulos fiscais a sua propriedada tem:</label>
-                <select id="fiscalModule">
-                    <option value="minifundio">até 1 módulo fiscal</option>
-                    <option value="small_propertie">maior que 1 e até 2 módulos fiscais</option>
-                    <option value="medium_propertie">maior que 2 a até 4 módulos fiscais</option>
-                    <option value="secondCategorie_medium_propertie">maior que 4 a até 10 módulos fiscais</option>
-                    <option value="bigPropertie">maior que 10 módulos fiscais</option>
-                </select>
+
                 <div>
                     <label for="Modulo Fiscal">Modulo Fiscal</label>
                     <input readonly='readonly' type="text" style="text-size-adjust: 10%" id="module">
 
                 </div>
                 <div>
-                    <label for="Dimensão (ha)">Dimensão(ha)</label>
-                    <input readonly='readonly' type="text" style="text-size-adjust: 10%" id="dimension">
-                </div>
-                <div>
                     <label for="propertieClassification">Classificado como</label>
-                    <input readonly='readonly' type="text" style="text-size-adjust: 10%" id="propertieClassification">
+                    <p readonly='readonly' type="text" style="text-size-adjust: 10%" id="propertieClassification"></p>
                 </div>
-                <div>
-                    <h5>Verificar a quantidade de faixa mínima para cada caso</h5>
-                    <label for="app_margem_corrego">APP em margens de córrego (m)</label>
-                    <p type="text" style="text-size-adjust: 10%" id="app_margem_corrego"></p>
-                </div>
-                <div>
-                    <label for="app_nascente">APP em torno de nascentes (m)</label>
-                    <input readonly='readonly' type="text" style="text-size-adjust: 10%" id="app_nascente">
-                </div>
+                <fieldset>
+                    <div>
+                        <h5 style="color:blueviolet">Verificar a quantidade de faixa mínima para cada caso</h5>
+                        <label for="app_margem_corrego">APP em margens de córrego (m)</label>
+                        <p type="text" style="text-size-adjust: 10%" id="app_margem_corrego"></p>
+                    </div>
+                    <div>
+                        <label for="app_nascente">APP em torno de nascentes (m)</label>
+                        <p readonly='readonly' type="text" style="text-size-adjust: 10%" id="app_nascente"></p>
+                    </div>
 
-                <div>
-                    <label for="reseva_legal">Área de reserva Legal</label>
-                    <input readonly='readonly' type="text" style="text-size-adjust: 10%" id="reseva_legal">
-                </div>
+                    <div>
+                        <label for="reseva_legal">Área de reserva Legal</label>
+                        <p readonly='readonly' type="text" style="text-size-adjust: 10%" id="reseva_legal"></p>
+                    </div>
+                </fieldset>
 
                 <div class="popup" onclick="popupFunction()">Infográfico explicativo -->
                     <a class="popuptext" id="myPopup" href="https://central3.to.gov.br/arquivo/180407/]">Clique e
