@@ -50,49 +50,59 @@
         </fieldset>
         <!--Identify farmer profile-->
         <div>
-            <p>Qual a sua renda bruta anual (RBA)? Caso não saiba, use uma receita estimada</p>
-            <div>
-                <div class="popup" onclick="popupFunction()">Não sabe o que é RBA?
-                    <a class="popuptext" id="myPopup" href="https://central3.to.gov.br/arquivo/180407/]">Clique e
-                        entenda</a>
-                </div>
-                </br>
-                <select>
-                    <option>até R$ 360 mil</option>
-                    <option>superior a R$ 360 mil e até R$ 1,6 milhão</option>
-                    <option>superior a R$ 1,6 milhão</option>
+            <form action="#" method="post" id="demoForm" class="demoForm">
+                <label>Escolha seu estado e cidade</label>
+                <select id="state">
                 </select>
-            </div>
-            <div>
-                <p><a>Quero compreender melhor sobre as novas regras para Áreas de Preservação Permanente</a></p>
-            </div>
-            <div>
-                <p>Agora, vamos verificar como a sua propriedade é classificada.</p>
 
-                <form action="#" method="post" id="demoForm" class="demoForm">
-                    <label>Escolha seu estado e cidade</label>
-                    <select id="country">
-                    </select>
+                <select id="municipie">
+                </select>
+                <br>
+                <label>Quantos módulos fiscais a sua propriedada tem:</label>
+                <select id="fiscalModule">
+                    <option value="minifundio">até 1 módulo fiscal</option>
+                    <option value="small_propertie">maior que 1 e até 2 módulos fiscais</option>
+                    <option value="medium_propertie">maior que 2 a até 4 módulos fiscais</option>
+                    <option value="secondCategorie_medium_propertie">maior que 4 a até 10 módulos fiscais</option>
+                    <option value="bigPropertie">maior que 10 módulos fiscais</option>
+                </select>
+                <div>
+                    <label for="Modulo Fiscal">Modulo Fiscal</label>
+                    <input readonly='readonly' type="text" style="text-size-adjust: 10%" id="module">
 
-                    <select id="state">
-                    </select>
-                    </br>
-                    <div>
-                        <p style="text-size-adjust: 10%" id="module"></p>
-                    </div>
-                    <label>Selecione quantos módulos fiscais a sua propriedada tem:</label>
-                    <select class="fiscalModule">
-                        <option class="firstCategorie_FiscalModule">até 1 módulo fiscal</option>
-                        <option class="secondCategorie_FiscalModule">maior que 1 e até 2 módulos fiscais</option>
-                        <option class="thirdCategorie_FiscalModule">maior que 2 a até 4 módulos fiscais</option>
-                        <option class="fourthCategorie_FiscalModule">maior que 4 a até 10 módulos fiscais</option>
-                        <option class="fivethCategorie_FiscalModule">maior que 10 módulos fiscais</option>
-                    </select>
-                </form>
+                </div>
+                <div>
+                    <label for="Dimensão (ha)">Dimensão(ha)</label>
+                    <input readonly='readonly' type="text" style="text-size-adjust: 10%" id="dimension">
+                </div>
+                <div>
+                    <label for="propertieClassification">Classificado como</label>
+                    <input readonly='readonly' type="text" style="text-size-adjust: 10%" id="propertieClassification">
+                </div>
+                <div>
+                    <h5>Verificar a quantidade de faixa mínima para cada caso</h5>
+                    <label for="app_margem_corrego">APP em margens de córrego (m)</label>
+                    <p type="text" style="text-size-adjust: 10%" id="app_margem_corrego"></p>
+                </div>
+                <div>
+                    <label for="app_nascente">APP em torno de nascentes (m)</label>
+                    <input readonly='readonly' type="text" style="text-size-adjust: 10%" id="app_nascente">
+                </div>
 
-                <div class="farmerProfile"></div>
-            </div>
+                <div>
+                    <label for="reseva_legal">Área de reserva Legal</label>
+                    <input readonly='readonly' type="text" style="text-size-adjust: 10%" id="reseva_legal">
+                </div>
+
+                <div class="popup" onclick="popupFunction()">Infográfico explicativo -->
+                    <a class="popuptext" id="myPopup" href="https://central3.to.gov.br/arquivo/180407/]">Clique e
+                        veja</a>
+                </div>
+            </form>
+
+            <div class="farmerProfile"></div>
         </div>
+    </div>
 </body>
 <script src="../NewForestCodeToll/js/main.js"></script>
 <script src="../NewForestCodeToll/js/data.js"></script>
